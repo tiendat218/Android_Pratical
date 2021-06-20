@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.pratical_android.activity.Employee;
-
 public class DBHepler extends SQLiteOpenHelper {
     private static final String DB_NAME = "EMPLOYEE";
     private static final int DB_VERSION = 1;

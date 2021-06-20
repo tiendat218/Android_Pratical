@@ -1,50 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmployeeActivity">
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
 
-    <!-- Empty view for the list -->
-    <RelativeLayout
-        android:id="@+id/empty_view"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:text="Employee App"
+        android:textStyle="bold"
+        android:layout_margin="30dp"
+        android:textSize="30sp" />
 
-        <ImageView
-            android:id="@+id/empty_shelter_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:hint="Enter Employee Name"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/edName"/>
 
-        <TextView
-            android:id="@+id/empty_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/empty_shelter_image"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif-medium"
-            android:paddingTop="16dp"
-            android:textAppearance="?android:textAppearanceMedium"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Designation"
+        android:id="@+id/edDesignation"/>
 
-        <TextView
-            android:id="@+id/empty_subtitle_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/empty_title_text"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="sans-serif"
-            android:paddingTop="8dp"
-            android:textAppearance="?android:textAppearanceSmall"
-            android:textColor="#A2AAB0"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:hint="Enter Salary"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/edSalary"/>
 
-        <ListView
-            android:id="@+id/list"
+    <LinearLayout
+        android:id="@+id/details"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:weightSum="3">
 
-</RelativeLayout>
+                <Button
+                    android:id="@+id/btAdd"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="add Employee"
+                    />
+
+                <Button
+                    android:id="@+id/btUpdate"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Update Record"
+                    />
+
+                <Button
+                    android:id="@+id/btDelete"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Delete" />
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lvEmployee"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="match_parent"/>
+</LinearLayout>
